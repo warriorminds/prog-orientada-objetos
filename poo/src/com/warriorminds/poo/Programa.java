@@ -1,6 +1,8 @@
 package com.warriorminds.poo;
 
+import com.warriorminds.poo.classes.ClasesEstaticas;
 import com.warriorminds.poo.classes.ClasesInternas;
+import com.warriorminds.poo.classes.UsandoThis;
 import com.warriorminds.poo.classes.Usuario;
 
 public class Programa {
@@ -16,6 +18,8 @@ public class Programa {
         parametrosPorReferencia();
         constructores();
         clasesInternas();
+        clasesEstaticas();
+        usandoThis();
     }
     
     private static void seccionUsoDeMetodos() {
@@ -81,6 +85,27 @@ public class Programa {
         ClasesInternas usuario = new ClasesInternas("WarriorMinds", "warrior.software.minds@gmail.com", 
                 25, "Calle Central", "Colonia Central", "12345");
         System.out.println(usuario.mostrarInfo());
+        System.out.println("===========================================");
+    }
+    
+    private static void clasesEstaticas() {
+        System.out.println("===========================================");
+        System.out.println("CLASES ESTÁTICAS");
+        ClasesEstaticas.Direccion direccion = new ClasesEstaticas.Direccion("Calle Central", "Colonia Nueva", "123456");    // Uso de la clase estática: ClasePadre.ClaseEstatica.
+        ClasesEstaticas usuario = new ClasesEstaticas("WarriorMinds", "warrior.software.minds@gmail.com", 25, direccion);
+        System.out.println(usuario.mostrarInfo());      // Mostrar la info del objeto usuario, que contiene un objeto dirección.
+        System.out.println(direccion.mostrarInfo());    // También se puede ver esta información de esta manera.
+        System.out.println("===========================================");
+    }
+    
+    private static void usandoThis() {
+        System.out.println("===========================================");
+        System.out.println("THIS");
+        UsandoThis objeto = new UsandoThis();
+        UsandoThis otroObjeto = new UsandoThis("Usando this");
+        
+        System.out.println("Constructor vacío: " + objeto.getNombre());
+        System.out.println("Constructor con valor: " + otroObjeto.getNombre());
         System.out.println("===========================================");
     }
 }

@@ -28,7 +28,7 @@ public class ClasesInternas {
     }
     
     /*
-     * Clas interna. Esta clase interna puede tener acceso a las variables de la clase padre.
+     * Clase interna. Esta clase interna puede tener acceso a las variables de la clase padre.
      * Al ser una clase privada, solamente la clase padre puede tener visibilidad y acceso a esta
      * clase. Se pueden utilizar este tipo de clases internas para crear objetos que solamente
      * la clase padre puede utilizar.
