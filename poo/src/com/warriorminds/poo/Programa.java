@@ -1,5 +1,6 @@
 package com.warriorminds.poo;
 
+import com.warriorminds.poo.classes.ClasesInternas;
 import com.warriorminds.poo.classes.Usuario;
 
 public class Programa {
@@ -14,6 +15,7 @@ public class Programa {
         parametrosPorValor();
         parametrosPorReferencia();
         constructores();
+        clasesInternas();
     }
     
     private static void seccionUsoDeMetodos() {
@@ -69,6 +71,16 @@ public class Programa {
         System.out.println("Usuario 1: " + usuario1.getNombre());                       // Usuario1 no tiene valores.
         System.out.println("Usuario 2: " + usuario2.getNombre());                       // Usuario2 tiene el nombre de "Warrior".
         System.out.println("Usuarios creados: " + Usuario.cuantosUsuariosCreados());    // Se han creado 6 usuarios hasta ahora.
+        System.out.println("===========================================");
+    }
+    
+    private static void clasesInternas() {
+        System.out.println("===========================================");
+        System.out.println("CLASES INTERNAS");
+        
+        ClasesInternas usuario = new ClasesInternas("WarriorMinds", "warrior.software.minds@gmail.com", 
+                25, "Calle Central", "Colonia Central", "12345");
+        System.out.println(usuario.mostrarInfo());
         System.out.println("===========================================");
     }
 }
