@@ -57,7 +57,18 @@ public class Usuario {
      * }
      * 
      */
+    public Usuario() {
+        Usuario.usuarioCreado();
+    }
     
+    public Usuario(String email, String nombre, String apellido, int edad) {
+        Usuario.usuarioCreado();
+        
+        this.email = email;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
     /* Fin de sección Constructores. */
     
     /**
@@ -84,6 +95,10 @@ public class Usuario {
         numeroDeUsuariosCreados++;
     }
     
+    public static int cuantosUsuariosCreados() {
+        return numeroDeUsuariosCreados;
+    }
+    
     /* Fin de sección Métodos de clase. */
     
     /**
@@ -97,6 +112,30 @@ public class Usuario {
     
     public String getNombre() {
         return nombre;
+    }
+    
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+    
+    public String getApellido() {
+        return apellido;
+    }
+    
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    
+    public int getEdad() {
+        return edad;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public String getEmail() {
+        return email;
     }
     
     /* Fin de sección Métodos de instancia */
